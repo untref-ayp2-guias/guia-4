@@ -52,6 +52,11 @@ func TestSubset(t *testing.T) {
 	set2 := set.NewSetList(1)
 	assert.True(t, Subset(set1, set2), "set2 deberia ser un subconjunto de set1")
 }
+func TestNoSubset(t *testing.T) {
+	set1 := set.NewSetList(1, 2)
+	set2 := set.NewSetList(5)
+	assert.False(t, Subset(set1, set2), "set2 no deberia ser un subconjunto de set1")
+}
 
 func TestEqual(t *testing.T) {
 	set1 := set.NewSetList(1, 2)
