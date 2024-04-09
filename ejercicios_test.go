@@ -20,6 +20,7 @@ func TestUnion(t *testing.T) {
 		assert.Contains(t, values, v, "La union de set1 y set2 deberia dar [1,2,3]")
 	}
 }
+
 func TestIntersection(t *testing.T) {
 	set1 := set.NewSetList(1, 2, 5)
 	set2 := set.NewSetList(1, 3, 5)
@@ -56,4 +57,10 @@ func TestEqual(t *testing.T) {
 	set1 := set.NewSetList(1, 2)
 	set2 := set.NewSetList(2, 1)
 	assert.True(t, Equal(set1, set2), "Los conjuntos deberian ser iguales")
+}
+
+func TestNotEqual(t *testing.T) {
+	set1 := set.NewSetList(1, 2)
+	set2 := set.NewSetList(2, 3)
+	assert.False(t, Equal(set1, set2), "Los conjuntos deberian ser distintos")
 }
