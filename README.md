@@ -1,44 +1,53 @@
-# Guía 4
-## Conjuntos o sets
+# Guia 4
 
-En la carpeta `/set` se encuentra una implementación de conjunto sobre una lista enlazada simple (reescrita y optimizada para representar conjuntos)
-La carpeta `/tests` contiene los tests unitarios de conjunto y los tests de los ejercicios. Por favor no modificar los nombres de estos archivos para que funcionen las pruebas automáticas
+## Conjuntos
 
-## Ejercicios
+### Ejercicio 1
 
-Completar los ejercicios en el archivo ejercicios.go
+Implementar el metodo Union entre dos conjuntos, dado un conjunto A y un conjunto B, la unión de los conjuntos A y B será otro conjunto que estará formado por todos los elementos de A, con todos los elementos de B sin repetir ningún elemento.
 
-1. Escribir una función que reciba una cadena y devuelva el conjunto de todas las letras de la cadena:
+Archivo: [`ejercicios.go`](ejercicios.go)
 
-```go
-func Letras(s string) *set.Set[string]
-```
+### Ejercicio 2
 
-> Recuerden que al recorrer una cadena deben castear cada valor a string ya que GO representa los caracteres como enteros. No se deben incluir los blancos en el conjunto. Por lo tanto se recomienda usar `github.com/agrison/go-commons-lang/stringUtils` para chequear si un caracter es un blanco (espacio, tabulador, salto de línea, etc.)
+Implementar el metodo Intersection entre dos conjuntos, dado un conjunto A y un conjunto B, la  intersección de los conjuntos A y B será otro conjunto que estará formado por los elementos de A y los elementos de B que sean comunes, los elementos no comunes entre A y B, serán excluidos.
 
-2. Escribir una función que reciba un arreglo de elementos comparables y elimine los repetidos.
+Archivo: [`ejercicios.go`](ejercicios.go)
 
-```go
-func EliminarRepetidos[T comparable](arreglo []T) []T
-```
+### Ejercicio 3
 
- 3. Escribir una función que reciba dos conjuntos A y B y devuelva la diferencia simétrica entre ambos.
+Implementar el metodo Difference entre dos conjuntos, dado un conjunto A y un conjunto B, la  diferencia de los conjuntos A y B será otro conjunto que estará formado por los elementos de A que no estan presentes en B.
 
-> La diferencia simétrica es el conjunto de elementos que solo pertenecen a A o a B pero no a ambos a la vez.
+Archivo: [`ejercicios.go`](ejercicios.go)
 
-```go
-func DiferenciaSimetrica[T comparable](s1, s2 *set.Set[T]) *set.Set[T]
-```
+### Ejercicio 4
 
-4. Escribir una función que reciba una cantidad variables de conjuntos de elementos comparables y devuelva la intersección de todos ellos.
+Implementar el metodo Subset entre dos conjuntos, un conjunto A es subconjunto de B si todos los elementos de A están incluidos en B.
 
-```go
-func Interseccion[T comparable](conjuntos ...*set.Set[T]) *set.Set[T] 
-```
+Archivo: [`ejercicios.go`](ejercicios.go)
 
-5. Agregar casos de tests para probar las siguientes propiedades de la diferencia simétrica de conjuntos (Δ) (`/tests/ejercicios_tests/DiferenciaSimetrica_test.go`)
+### Ejercicio 5
 
-    - Nilpotencia: A Δ A = ∅
-    - Asociativa: (A Δ B) Δ C = A Δ (B Δ C)
-    - Conmutativa: A Δ B = B Δ A  
-    - Neutro: A Δ ∅ = A
+Implementar el metodo Equal entre dos conjuntos, un conjunto A es igual a un conjunto B si ambos conjyntos tienen los mismos elementos.
+
+Archivo: [`ejercicios.go`](ejercicios.go)
+
+### Ejercicio 6
+
+Implementar el metodo SymmetricDifference entre dos conjuntos, dado un conjunto A y un conjunto B, la diferencia simetrica de los conjuntos A y B será otro conjunto que estará formado por todos los elementos no comunes a los conjuntos A y B.
+
+Archivo: [`ejercicios.go`](ejercicios.go)
+
+### Ejercicio 7
+
+Implementar el metodo EliminarRepetidos, dado un array A de entrada, devuelve un nuevo array B con los elementos de A quitando los elementos repetidos.
+
+Archivo: [`ejercicios.go`](ejercicios.go)
+
+### Ejercicio 8
+
+Implementar el metodo InterseccionMultiple, dado un número N de conjuntos, devuelve un nuevo conjunto que es la intersección entre los N conjuntos de entrada
+
+Archivo: [`ejercicios.go`](ejercicios.go)
+
+

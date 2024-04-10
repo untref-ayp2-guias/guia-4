@@ -98,11 +98,11 @@ func TestNotEqual(t *testing.T) {
 
 func TestSymmetricDifference(t *testing.T) {
 	set1 := set.NewSetList(1, 2, 3, 4, 7, 11)
-	set2 := set.NewSetList(3, 4, 11)
+	set2 := set.NewSetList(3, 4, 11, 12)
 	result := SymmetricDifference(set1, set2)
 	require.NotNil(t, result)
-	assert.Equal(t, 3, result.Size(), "La diferencia simetrica de set1 y set2 deberia tener 3 elementos")
-	esperado := []int{1, 2, 7}
+	assert.Equal(t, 4, result.Size(), "La diferencia simetrica de set1 y set2 deberia tener 4 elementos")
+	esperado := []int{1, 2, 7, 12}
 	values := result.Values()
 	for _, v := range esperado {
 		assert.Contains(t, values, v, "La diferencia simetrica de set1 y set2 deberia dar [1,2,7]")
@@ -130,12 +130,12 @@ func TestEliminarRepetidos(t *testing.T) {
 	}
 }
 
-func TestInterseccion(t *testing.T) {
+func TestInterseccionMultiple(t *testing.T) {
 	set1 := set.NewSetList(1, 2, 3)
 	set2 := set.NewSetList(2, 3)
 	set3 := set.NewSetList(2)
 
-	result := Interseccion(set1, set2, set3)
+	result := InterseccionMultiple(set1, set2, set3)
 	require.NotNil(t, result)
 	assert.Equal(t, 1, result.Size(), "La interseccion entre set1, set2 y set3 deberia tener 1 elemento")
 	esperado := []int{2}
@@ -146,11 +146,11 @@ func TestInterseccion(t *testing.T) {
 	set1 = set.NewSetList(7, 11)
 	set2 = set.NewSetList[int]()
 	set3 = set.NewSetList[int]()
-	result = Interseccion(set1, set2, set3)
+	result = InterseccionMultiple(set1, set2, set3)
 	require.NotNil(t, result)
 	assert.Equal(t, 0, result.Size(), "La interseccion entre set1, set2 y set3 deberia tener 0 elementos")
 	set1 = set.NewSetList(7, 11)
-	result = Interseccion(set1)
+	result = InterseccionMultiple(set1)
 	require.NotNil(t, result)
 	assert.Equal(t, 0, result.Size(), "La interseccion con un solo conjunto deberia tener 0 elementos")
 }

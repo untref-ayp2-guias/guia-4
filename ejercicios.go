@@ -40,7 +40,7 @@ func EliminarRepetidos[T types.Ordered](array []T) []T {
 	return nil
 }
 
-func Interseccion[T types.Ordered](sets ...*set.SetList[T]) *set.SetList[T] {
+func InterseccionMultiple[T types.Ordered](sets ...*set.SetList[T]) *set.SetList[T] {
 	// Implementar
 	return nil
 }
