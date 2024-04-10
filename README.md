@@ -28,13 +28,13 @@ Archivo: [`ejercicios.go`](ejercicios.go)
 
 ### Ejercicio 5
 
-Implementar el metodo Equal entre dos conjuntos, un conjunto A es igual a un conjunto B si ambos conjyntos tienen los mismos elementos.
+Implementar el metodo Equal entre dos conjuntos, un conjunto A es igual a un conjunto B si ambos conjuntos tienen los mismos elementos.
 
 Archivo: [`ejercicios.go`](ejercicios.go)
 
 ### Ejercicio 6
 
-Implementar el metodo SymmetricDifference entre dos conjuntos, dado un conjunto A y un conjunto B, la diferencia simetrica de los conjuntos A y B será otro conjunto que estará formado por todos los elementos no comunes a los conjuntos A y B.
+Implementar el metodo SymmetricDifference entre dos conjuntos, dado un conjunto A y un conjunto B, la diferencia simétrica de los conjuntos A y B será otro conjunto que estará formado por todos los elementos no comunes a los conjuntos A y B.
 
 Archivo: [`ejercicios.go`](ejercicios.go)
 
