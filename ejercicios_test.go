@@ -69,3 +69,16 @@ func TestNotEqual(t *testing.T) {
 	set2 := set.NewSetList(2, 3)
 	assert.False(t, Equal(set1, set2), "Los conjuntos deberian ser distintos")
 }
+
+func TestSymmetricDifference(t *testing.T) {
+	set1 := set.NewSetList(1, 2, 3, 4, 7, 11)
+	set2 := set.NewSetList(3, 4, 11)
+	result := SymmetricDifference(set1, set2)
+	require.NotNil(t, result)
+	assert.Equal(t, 3, result.Size(), "La diferencia simetrica de set1 y set2 deberia tener 3 elementos")
+	esperado := []int{1, 2, 7}
+	values := result.Values()
+	for _, v := range esperado {
+		assert.Contains(t, values, v, "La diferencia simetrica de set1 y set2 deberia dar [1,2,7]")
+	}
+}

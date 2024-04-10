@@ -29,3 +29,8 @@ func Equal[T types.Ordered](s1, s2 *set.SetList[T]) bool {
 	// Implementar
 	return false
 }
+
+func SymmetricDifference[T types.Ordered](s1, s2 *set.SetList[T]) *set.SetList[T] {
+	// Implementar
+	return nil
+}
