@@ -34,3 +34,13 @@ func SymmetricDifference[T types.Ordered](s1, s2 *set.SetList[T]) *set.SetList[T
 	// Implementar
 	return nil
 }
+
+func EliminarRepetidos[T types.Ordered](array []T) []T {
+	// Implementar
+	return nil
+}
+
+func Interseccion[T types.Ordered](sets ...*set.SetList[T]) *set.SetList[T] {
+	// Implementar
+	return nil
+}
